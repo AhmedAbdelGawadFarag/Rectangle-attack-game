@@ -17,5 +17,12 @@ Bullet::Bullet()
 void Bullet::move()
 {
     this->setPos(this->x(),this->y()-10);
+    if(this->y()<0-this->rect().height()){
+       this->scene()->removeItem(this);
+        delete this;
+
+    }
+
+
 
 }
