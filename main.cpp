@@ -24,6 +24,9 @@ int main(int argc, char *argv[])
     rect->setRect(0,0,100,100);
 
     view->setScene(scene);
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+      view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
 
 
     view->show();

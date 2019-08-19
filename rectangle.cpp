@@ -8,13 +8,20 @@ Rectangle::Rectangle()
 }
 void Rectangle::keyPressEvent(QKeyEvent *event){
     if(event->key()==Qt::Key_Right){
-        this->setPos(this->x()+10,this->y());
+        if(this->x()<=this->scene()->width()-this->rect().width()){
+            qDebug()<<this->x();
 
-    }else if(event->key()==Qt::Key_Left){
-        this->setPos(this->x()-10,this->y());
+            this->setPos(this->x()+10,this->y());
+        }
+
+    } if(event->key()==Qt::Key_Left){
+        if(this->x()>0){
+            this->setPos(this->x()-10,this->y());
+
+        }
 
 
-    }else if(event->key()==Qt::Key_Space){
+    } if(event->key()==Qt::Key_Space){
     Bullet *bull=new Bullet;
     bull->setRect(0,0,10,30);
 
