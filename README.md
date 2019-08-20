@@ -1,2 +1,2 @@
-# Tower-defence-game
-Tower defence game with qt5 c++
+# Rectangle-attack-game
+Rectangle attack game with qt5 c++
