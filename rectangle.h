@@ -4,12 +4,17 @@
 #include<QGraphicsScene>
 #include<QGraphicsView>
 #include<QKeyEvent>
-
-class Rectangle : public QGraphicsRectItem
+#include<QObject>
+#include<enemy.h>
+class Rectangle :public QObject ,public QGraphicsRectItem
 {
+    Q_OBJECT
 public:
     Rectangle();
+
     void keyPressEvent(QKeyEvent *event);
+public slots:
+    void SpawnEnemies();
 };
 
 #endif // RECTANGLE_H

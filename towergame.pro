@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
     rectangle.cpp \
-    bullet.cpp
+    bullet.cpp \
+    enemy.cpp
 
 HEADERS += \
     rectangle.h \
-    bullet.h
+    bullet.h \
+    enemy.h
 
 FORMS +=
 

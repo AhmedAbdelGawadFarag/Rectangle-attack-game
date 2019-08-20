@@ -1,9 +1,20 @@
 #include "rectangle.h"
 #include<bullet.h>
 #include<QDebug>
+#include<enemy.h>
 Rectangle::Rectangle()
 {
 
+
+}
+
+void Rectangle::SpawnEnemies()
+{
+  Enemy *enemy=new Enemy();
+
+ qDebug().operator<<(&enemy);
+
+ this->scene()->addItem(enemy);
 
 }
 void Rectangle::keyPressEvent(QKeyEvent *event){
