@@ -1,5 +1,6 @@
 #include "enemy.h"
 #include<stdlib.h>
+#include<QDebug>
 Enemy::Enemy()
 {
 this->setRect(0,0,100,100);
@@ -21,5 +22,14 @@ timer->start(100);
 
 void Enemy::move()
 {
-    this->setPos(this->x(),this->y()+10);
+
+    if(this->y()>=this->scene()->height()){
+        this->scene()->removeItem(this);
+        delete this;
+        //qDebug()<<this->scene()->height();
+        return;
+    }else{
+
+        this->setPos(this->x(),this->y()+10);
+    }
 }
