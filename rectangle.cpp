@@ -39,7 +39,7 @@ void Rectangle::keyPressEvent(QKeyEvent *event){
     this->scene()->addItem(bull);
 qDebug()<<"rect x"<<this->x()<<" "<<this->y();
 
-    bull->setPos(this->x(),this->y());
+    bull->setPos(this->x()+40,this->y());
 
     qDebug()<<bull->x();
 
