@@ -6,6 +6,8 @@
 #include<QKeyEvent>
 #include<QObject>
 #include<QTimer>
+#include<score.h>
+extern Score *score;
 
 class Bullet :public QObject,public QGraphicsRectItem
 {

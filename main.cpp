@@ -5,6 +5,10 @@
 #include<rectangle.h>
 #include<enemy.h>
 #include<QObject>
+#include<score.h>
+#include<health.h>
+  Score *score;
+  Health *health;
 int main(int argc, char *argv[])
 {
 
@@ -20,9 +24,14 @@ int main(int argc, char *argv[])
 
     Enemy *enemy=new Enemy();
 
+    health=new Health();
 
     scene->addItem(enemy);
+score=new Score();
 
+    scene->addItem(score);
+
+    scene->addItem(health);
 
     rect->setFlag(QGraphicsItem::ItemIsFocusable);
 
@@ -59,13 +68,18 @@ int main(int argc, char *argv[])
 
     rect->setPos(view->width()/2,view->height()-rect->rect().height());
 
+
     QTimer *timer=new QTimer();
+
+
 
     QObject::connect(timer,SIGNAL(timeout()),rect,SLOT(SpawnEnemies()));
 
 
 
     timer->start(2000);
+
+
 
     return a.exec();
 }

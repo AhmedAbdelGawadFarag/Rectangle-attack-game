@@ -4,7 +4,8 @@
 #include<QGraphicsScene>
 #include<QObject>
 #include<QTimer>
-
+#include<health.h>
+extern Health *health;
 class Enemy:public QObject,public QGraphicsRectItem
 {
     Q_OBJECT

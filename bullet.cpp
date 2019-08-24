@@ -20,6 +20,7 @@ void Bullet::move()
     QList<QGraphicsItem *> m=collidingItems();
     for(int i=0;i<collidingItems().size();i++){
         if(typeid (*(m[i]))==typeid (Enemy)){
+            score->increase();
             this->scene()->removeItem(m[i]);
             this->scene()->removeItem(this);
             delete this;

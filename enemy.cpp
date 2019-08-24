@@ -26,7 +26,11 @@ void Enemy::move()
     if(this->y()>=this->scene()->height()){
         this->scene()->removeItem(this);
         delete this;
-        //qDebug()<<this->scene()->height();
+        if(health->gethealth()==0){
+
+        }
+        health->decrease();
+
         return;
     }else{
 

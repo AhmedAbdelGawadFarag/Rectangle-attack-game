@@ -28,12 +28,16 @@ SOURCES += \
         main.cpp \
     rectangle.cpp \
     bullet.cpp \
-    enemy.cpp
+    enemy.cpp \
+    score.cpp \
+    health.cpp
 
 HEADERS += \
     rectangle.h \
     bullet.h \
-    enemy.h
+    enemy.h \
+    score.h \
+    health.h
 
 FORMS +=
 
